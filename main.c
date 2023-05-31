@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "agendar_cita.h"
+#include "editar_cita.h"
+#include "eliminar_cita.h"
+#include "visualizar_horarios.h"
+#include "reiniciar_horarios.h"
+#include "volver.h"
 
 
 int main()
