@@ -13,6 +13,7 @@ int main()
 {
     //Declaración de variables
     int user_option;
+    char key;
 
     //Creación del menú
     do
@@ -31,26 +32,32 @@ int main()
         {
         case 1:
             //Código para agendar cita
+            volver(&key);
             break;
 
         case 2:
             //Código para editar cita
+            volver(&key);
             break;
 
         case 3:
             //Código para eliminar cita
+            volver(&key);
             break;
 
         case 4:
             //Código para visualizar horario
+            volver(&key);
             break;
 
         case 5:
             //Código para reiniciar los horarios
+            volver(&key);
             break;
 
         case 6:
             //Código para salir del programa
+            volver(&key);
             break;
         
         default:
