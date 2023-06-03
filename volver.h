@@ -1,6 +1,6 @@
 #ifndef VOLVER_H
 #define VOLVER_H
 
-void volver(char *tecla);
+void volver(char *key);
 
 #endif
