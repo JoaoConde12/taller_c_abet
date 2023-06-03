@@ -13,12 +13,13 @@ int main()
 {
     //Declaración de variables
     int user_option;
+    int user_option_doctor;
     char key;
 
     //Creación del menú
     do
     {
-        printf("******************** Sistema de agendacion de citas ********************\n");
+        printf("\n******************** Sistema de agendacion de citas ********************\n");
         printf("\n\t1. Agendar una cita\n");
         printf("\t2. Editar una cita\n");
         printf("\t3. Eliminar una cita\n");
@@ -32,6 +33,7 @@ int main()
         {
         case 1:
             //Código para agendar cita
+            agendar_cita(&user_option_doctor);
             volver(&key);
             break;
 
@@ -57,7 +59,6 @@ int main()
 
         case 6:
             //Código para salir del programa
-            volver(&key);
             break;
         
         default:
