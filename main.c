@@ -61,6 +61,7 @@ int main()
             break;
         
         default:
+            printf("Opcion fuera de rango. Intenta otra vez.\n\n");
             break;
         }
     }
