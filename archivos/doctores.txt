@@ -1,8 +1,8 @@
-	1. Jeffer Toala
-	2. Laury Pestana
-	3. Luis Valencia
-	4. Ivan Cabezas
-	5. Alejandra Diaz
-	6. Adam Zambrano
-	7. Alan Marquinez
-	8. Adriana Moreta	
+Jeffer Toala
+Laury Pestana
+Luis Valencia
+Ivan Cabezas
+Alejandra Diaz
+Adam Zambrano
+Alan Marquinez
+Adriana Moreta	
