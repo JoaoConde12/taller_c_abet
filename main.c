@@ -28,6 +28,7 @@ int main()
         printf("\t6. Salir del programa\n");
         printf("\nSeleccione una opcion: ");
         scanf("%d", &user_option);
+        printf("\n");
         
         switch (user_option)
         {
