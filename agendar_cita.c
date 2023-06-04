@@ -1,29 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "agendar_cita.h"
-
-FILE *fd;
 
 void agendar_cita(int *option)
 {
-    int c;
+    FILE *file;
+    int counter;
     char path[] = "C:\\Users\\dell-pc\\Repositorios\\taller_c_abet\\archivos\\doctores.txt";
-    fd = fopen(path, "r");
+    char line[50];
+    size_t lenght = 0;
 
-    printf("\n");
+    file = fopen(path, "r");
 
-    while ((c = fgetc(fd)) != EOF)
+    if (file)
     {
-        if (c == '\n')
+        while (fgets(line, sizeof(line), file) != NULL)
         {
-            printf("\n");
+            if (line[strlen(line) - 1] == '\n')
+            {
+                line[strlen(line) - 1] == '\O';
+            }
+            printf("\t%d. %s", counter + 1, line);
+            counter++;
         }
-        else
-        {
-            putchar(c);
-        }
+        fclose(file);
     }
-
-    printf("\n\nSeleccione el doctor: ");
+    else
+    {
+        printf("No se pudo abrir el archivo");
+    }
+    printf("\n\nSeleccione un doctor: ");
     scanf("%d", option);
 }
