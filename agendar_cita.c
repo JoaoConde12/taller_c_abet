@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include "agendar_cita.h"
+#include "imprimir_horario.h"
+#define doctor
+
 
 void agendar_cita(int *option)
 {
@@ -19,12 +22,12 @@ void agendar_cita(int *option)
         {
             if (line[strlen(line) - 1] == '\n')
             {
-                line[strlen(line) - 1] == '\O';
+                line[strlen(line) - 1] == '\0';
             }
             printf("\t%d. %s", counter + 1, line);
             counter++;
         }
-        fclose(file);
+        //fclose(file);
     }
     else
     {
@@ -32,4 +35,5 @@ void agendar_cita(int *option)
     }
     printf("\n\nSeleccione un doctor: ");
     scanf("%d", option);
+    imprimir_horario(option, counter);
 }
