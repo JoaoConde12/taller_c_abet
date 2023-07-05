@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "imprimir_horario.h"
 #include "obtener_informacion.h"
 
