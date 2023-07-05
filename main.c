@@ -4,7 +4,7 @@
 #include "agendar_cita.h"
 #include "editar_cita.h"
 #include "eliminar_cita.h"
-#include "visualizar_horarios.h"
+#include "visualizar_horario.h"
 #include "reiniciar_horarios.h"
 #include "volver.h"
 
