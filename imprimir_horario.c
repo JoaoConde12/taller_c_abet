@@ -2,13 +2,17 @@
 #include <stdlib.h>
 #include <string.h>
 #include "imprimir_horario.h"
+#include "obtener_informacion.h"
 
 
 void imprimir_horario(int *option, int counter)
 {
     FILE *file;
-    char path[] = "C:\\Users\\dell-pc\\Repositorios\\taller_c_abet\\archivos\\doctores.txt";
+    char path[] = "C:\\Users\\dell-pc\\Repositorios\\taller_c_abet\\doctores.txt";
     char line[50];
+    int counter_name_doctor = 0;
+    char *file_doctor_value;
+    int **horario;
 
     if (*option >= 1 && *option <= counter)
     {
@@ -23,16 +27,22 @@ void imprimir_horario(int *option, int counter)
                     line[strlen(line) - 1] = '\0';
                 }
                 counter++;
+                counter_name_doctor++;
             }
             fclose(file);
+
+            file_doctor_value = obtener_archivo(counter_name_doctor);
+            FILE *file_doctor = fopen(file_doctor_value, "r");
+            horario = leer_horarios(file_doctor_value);
+
             int hour = 7;
             int minute = 1;
             int check_hour = 0;
             int total_hours = 14;
             int day = 0;
             int total_days = 7;
-            //int value = 0;
-            int posicion = 1;
+            int value = 0;
+            
             printf("_____________________________________________________________________________________________________________________________________\n");
             printf("                                                         Doctor/a %s                                                                  \n", line);
             printf("-------------------------------------------------------------------------------------------------------------------------------------\n");
@@ -62,10 +72,16 @@ void imprimir_horario(int *option, int counter)
                 }
                 while (day < total_days)
                 {
-                    printf("       -        ");
+                    if (horario[check_hour - 1][day] == 0)
+                    {
+                        printf("       -        ");
+                    }
+                    else
+                    {
+                        printf("  Cita agendada ");
+                    }
                     printf("|");
                     day++;
-                    posicion++;
                 }
                 day = 0;
                 minute++;
@@ -76,6 +92,7 @@ void imprimir_horario(int *option, int counter)
                 printf("\n");
             }
             printf("-------------------------------------------------------------------------------------------------------------------------------------\n");
+            liberar_horarios(horario);
         }
         else
         {
