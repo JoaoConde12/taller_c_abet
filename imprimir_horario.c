@@ -7,33 +7,14 @@
 
 void imprimir_horario(int *option, int counter)
 {
-    FILE *file;
-    char path[] = "C:\\Users\\dell-pc\\Repositorios\\taller_c_abet\\doctores.txt";
-    char line[50];
-    int counter_name_doctor = 0;
+    char *name_doctor;
     char *file_doctor_value;
     int **horario;
 
-    if (*option >= 1 && *option <= counter)
-    {
-        file = fopen(path, "r");
-        if (file)
-        {
-            counter = 0;
-            while (counter < *option && fgets(line, sizeof(line), file) != NULL)
-            {
-                if (line[strlen(line) - 1] == '\n')
-                {
-                    line[strlen(line) - 1] = '\0';
-                }
-                counter++;
-                counter_name_doctor++;
-            }
-            fclose(file);
-
-            file_doctor_value = obtener_archivo(counter_name_doctor);
+            name_doctor = obtener_nombre_doctor(option, counter);
+            file_doctor_value = obtener_archivo_doctor(*option);
             FILE *file_doctor = fopen(file_doctor_value, "r");
-            horario = leer_horarios(file_doctor_value);
+            horario = leer_horario_doctor(file_doctor_value);
 
             int hour = 7;
             int minute = 1;
@@ -44,7 +25,7 @@ void imprimir_horario(int *option, int counter)
             int value = 0;
             
             printf("_____________________________________________________________________________________________________________________________________\n");
-            printf("                                                         Doctor/a %s                                                                  \n", line);
+            printf("                                                         Doctor/a %s                                                                  \n", name_doctor);
             printf("-------------------------------------------------------------------------------------------------------------------------------------\n");
             printf("    Hora     |     Lunes      |    Martes      |    Miercoles   |     Jueves     |     Viernes    |    Sabado      |     Domingo    |\n");
             printf("-------------------------------------------------------------------------------------------------------------------------------------\n");
@@ -92,11 +73,5 @@ void imprimir_horario(int *option, int counter)
                 printf("\n");
             }
             printf("-------------------------------------------------------------------------------------------------------------------------------------\n");
-            liberar_horarios(horario);
-        }
-        else
-        {
-            printf("No se pudo abrir el archivo\n");
-        }
-    }
+            liberar_horario(horario);
 }
