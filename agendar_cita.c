@@ -10,7 +10,7 @@ void agendar_cita(int *option)
 {
     FILE *file;
     int counter;
-    char path[] = "C:\\Users\\dell-pc\\Repositorios\\taller_c_abet\\archivos\\doctores.txt";
+    char path[] = "C:\\Users\\dell-pc\\Repositorios\\taller_c_abet\\doctores.txt";
     char line[50];
     size_t lenght = 0;
 
