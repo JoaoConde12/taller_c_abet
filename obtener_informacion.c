@@ -10,30 +10,23 @@ char *obtener_nombre_doctor(int *option, int counter)
     char path[] = "C:\\Users\\dell-pc\\Repositorios\\taller_c_abet\\doctores.txt";
     char line[50];
 
-    if (*option >= 1 && *option <= counter)
+    file = fopen(path, "r");
+    if (file)
     {
-        file = fopen(path, "r");
-        if (file)
+        counter = 0;
+        while (counter < *option && fgets(line, sizeof(line), file) != NULL)
         {
-            counter = 0;
-            while (counter < *option && fgets(line, sizeof(line), file) != NULL)
+            if (line[strlen(line) - 1] == '\n')
             {
-                if (line[strlen(line) - 1] == '\n')
-                {
-                    line[strlen(line) - 1] = '\0';
-                }
-                counter++;
+                line[strlen(line) - 1] = '\0';
             }
-            fclose(file);
+            counter++;
         }
-        else
-        {
-            printf("No se pudo abrir el archivo\n");
-        }
+        fclose(file);
     }
     else
     {
-        printf("\nEse doctor no se encuentra en la lista\n\n");
+        printf("No se pudo abrir el archivo\n");
     }
 
     return strdup(line);
@@ -72,6 +65,7 @@ char *obtener_archivo_doctor(int option)
     {
         printf("No se pudo abrir el archivo\n");
     }
+    
     return strdup(file_doctor_value);
 }
 
