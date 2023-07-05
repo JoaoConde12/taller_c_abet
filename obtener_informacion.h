@@ -6,5 +6,4 @@ char *obtener_archivo_doctor(int counter_name_doctor);
 int **leer_horario_doctor(char *name_file);
 void liberar_horario(int** horario);
 
-
 #endif
