@@ -3,7 +3,44 @@
 #include <string.h>
 #include "obtener_informacion.h"
 
-char *obtener_archivo(int counter_name_doctor)
+
+char *obtener_nombre_doctor(int *option, int counter)
+{
+    FILE *file;
+    char path[] = "C:\\Users\\dell-pc\\Repositorios\\taller_c_abet\\doctores.txt";
+    char line[50];
+
+    if (*option >= 1 && *option <= counter)
+    {
+        file = fopen(path, "r");
+        if (file)
+        {
+            counter = 0;
+            while (counter < *option && fgets(line, sizeof(line), file) != NULL)
+            {
+                if (line[strlen(line) - 1] == '\n')
+                {
+                    line[strlen(line) - 1] = '\0';
+                }
+                counter++;
+            }
+            fclose(file);
+        }
+        else
+        {
+            printf("No se pudo abrir el archivo\n");
+        }
+    }
+    else
+    {
+        printf("\nEse doctor no se encuentra en la lista\n\n");
+    }
+
+    return strdup(line);
+}
+
+
+char *obtener_archivo_doctor(int option)
 {
     FILE *file;
     char path[] = "C:\\Users\\dell-pc\\Repositorios\\taller_c_abet\\doctores.txt";
@@ -17,9 +54,9 @@ char *obtener_archivo(int counter_name_doctor)
     counter = 0;
     if (file)
     {
-        while (counter < counter_name_doctor && fgets(name_doctor, sizeof(name_doctor), file) != NULL)
+        while (counter < option && fgets(name_doctor, sizeof(name_doctor), file) != NULL)
         {
-            if (counter == counter_name_doctor - 1)
+            if (counter == option - 1)
             {
                 name_doctor[strcspn(name_doctor, "\n")] = '\0';
                 strcpy(file_doctor_value, path_doctors);
@@ -39,7 +76,7 @@ char *obtener_archivo(int counter_name_doctor)
 }
 
 
-int **leer_horarios(char *name_file)
+int **leer_horario_doctor(char *name_file)
 {
     FILE *file = fopen(name_file, "r");
 
@@ -65,7 +102,7 @@ int **leer_horarios(char *name_file)
 }
 
 
-void liberar_horarios(int** horario)
+void liberar_horario(int** horario)
 {
     for (int i = 0; i < 16; i++)
     {
