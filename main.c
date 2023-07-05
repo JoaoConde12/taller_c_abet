@@ -50,6 +50,7 @@ int main()
 
         case 4:
             //Código para visualizar horario
+            visualizar_horario(&user_option_doctor);
             volver(&key);
             break;
 
