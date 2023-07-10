@@ -23,8 +23,7 @@ int main()
         printf("\t2. Editar una cita\n");
         printf("\t3. Eliminar una cita\n");
         printf("\t4. Visualizar horario\n");
-        printf("\t5. Reiniciar horarios\n");
-        printf("\t6. Salir del programa\n");
+        printf("\t5. Salir del programa\n");
         printf("\nSeleccione una opcion: ");
         scanf("%d", &user_option);
         printf("\n");
@@ -39,6 +38,7 @@ int main()
 
         case 2:
             //Código para editar cita
+            editar_cita(&user_option_doctor);
             volver(&key);
             break;
 
@@ -55,11 +55,6 @@ int main()
             break;
 
         case 5:
-            //Código para reiniciar los horarios
-            volver(&key);
-            break;
-
-        case 6:
             //Código para salir del programa
             break;
         
@@ -68,7 +63,7 @@ int main()
             break;
         }
     }
-    while (user_option != 6);    
+    while (user_option != 5);    
 
     return 0;
 }
