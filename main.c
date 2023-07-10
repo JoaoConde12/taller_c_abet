@@ -5,7 +5,6 @@
 #include "editar_cita.h"
 #include "eliminar_cita.h"
 #include "visualizar_horario.h"
-#include "reiniciar_horarios.h"
 #include "volver.h"
 
 
@@ -45,6 +44,7 @@ int main()
 
         case 3:
             //Código para eliminar cita
+            eliminar_citar(&user_option_doctor);
             volver(&key);
             break;
 
