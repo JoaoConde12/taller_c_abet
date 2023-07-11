@@ -1,1 +1,3 @@
 # taller_c_abet
+
+La fundación Salud para Todos es una organización no gubernamental que financia hasta un 90% de los tratamientos de pacientes a través de donaciones de empresas privadas y población civil. Debido a la pandemia producida por el Covid-19 ha tenido un decremento de sus ingresos haciendo que muchos de sus tratamientos ya no sean financiados parcialmente o en su totalidad. Por tal motivo, con la finalidad de brindar los tratamientos completos a sus pacientes la fundación con ayuda de entes internacionales implementó una unidad médica, la cual es gestionada y administrada por la misma fundación. Sin embargo, una vez que fue puesta en marcha, la fundación se encontró con los siguientes problemas:
