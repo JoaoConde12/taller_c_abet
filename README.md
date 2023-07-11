@@ -42,13 +42,13 @@ A continuación se mostrará cada opción en más detalle:
 
 Una vez seleccionado el doctor, se desplegará su horario y en él se podrá visualizar en que día y hora tiene una cita agendada. Luego se le pedirá al usuario que inserte el ID, el cual es el número de línea el cual correspondería a la hora, por ejemplo el ID 1 corresponde a la hora de 7:00 am - 7:20 am. Después de seleccionar el ID, se le pide que inserte el número del día, ejemplo:
 
-  Lunes = 1\n
-  Martes = 2\n
-  Miércoles = 3\n
-  Jueves = 4\n
-  Viernes = 5\n
-  Sábado = 6\n
-  Domingo = 7\n
+  - Lunes = 1
+  - Martes = 2
+  - Miércoles = 3
+  - Jueves = 4
+  - Viernes = 5
+  - Sábado = 6
+  - Domingo = 7
 
 Y en caso de que en el ID (hora) y día que se seleccionó, no haya una cita agendada, se agendará una cita para esa fecha. En el caso de que esa fecha esté ocupada, no se podrá agendar la cita y se volverá al menú principal
 
