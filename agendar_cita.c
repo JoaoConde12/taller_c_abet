@@ -82,6 +82,10 @@ void agendar_cita(int *option)
             printf("Ese horario se encuentra ocupado.\n");
         }
     }
+    else
+    {
+        printf("Ese horario esta fuera de rango.\n");
+    }
     printf("\n");
     
     liberar_horario(horario);
