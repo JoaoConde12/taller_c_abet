@@ -81,6 +81,10 @@ void eliminar_citar(int *option)
             printf("Ese horario no tiene cita.\n");
         }
     }
+    else
+    {
+        printf("Ese horario esta fuera de rango.\n");
+    }
     printf("\n");
     
     liberar_horario(horario);
