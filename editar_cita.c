@@ -71,7 +71,7 @@ void editar_cita(int *option)
     file_doctor_value = obtener_archivo_doctor(*option);
     horario = leer_horario_doctor(file_doctor_value);
 
-    if (row >= 1 && row <= 16 && column >= 1 && column <= 7)
+    if (row >= 1 && row <= 16 && column >= 1 && column <= 7 && new_row >= 1 && new_row <= 16 && new_column >= 1 && new_column <= 7)
     {
         if (horario[row - 1][column - 1] == 1 && horario[new_row - 1][new_column - 1] == 0)
         {
@@ -97,6 +97,10 @@ void editar_cita(int *option)
         {
             printf("Ese horario no tiene cita o donde querias modificar la cita esta agendado.\n");
         }
+    }
+    else
+    {
+        printf("Ese horario esta fuera de rango.\n");
     }
     printf("\n");
     
