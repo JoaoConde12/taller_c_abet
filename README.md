@@ -8,15 +8,15 @@ La fundación Salud para Todos es una organización no gubernamental que financi
 
 En este taller se llegó a la conclusión que la prioridad de estas fundaciones siempre será el que sus pacientes puedan gozar de un excelente servicio y sus enfermedades sean atendidas correctamente, por ende, es importante solucionar el sistema de agendamiento de citas. Algunos de los nudos críticos que se identificaron fueron:
 
-### 1) La pérdida de información
+#### 1) La pérdida de información
 
 Al seragendadas las citas de forma manual esto permite que sea más probable que exista algún error a la hora del agendamiento. Esto se debe a varias causas, por ejemplo: Las citas se almacenarían en archivos en físico y es más probable que se pierdan; otro caso podría ser que al anotar la información del paciente a puño y letra quizás otra persona (por ejemplo, un médico) no entienda correctamente los datos del paciente que anotó el/la secretario/a y por ende haya confusión a la hora de la consulta médica
 
-### 2) La ineficiencia del proceso de agendamiento
+#### 2) La ineficiencia del proceso de agendamiento
 
 Evidentemente el escribir de forma manual todos los datos del paciente es mucho más lento y, por ende, causa que se demore mucho más el agendar la cita. Además, que luego de hacer la ficha del paciente este tiene que guardarlo en algún archivo lo cual demora más este proceso y que quizás los pacientes que desean agendar una cita en la unidad médica tengan que esperar más tiempo del que deberían.
 
-### 3) La disponibilidad de horarios del doctor
+#### 3) La disponibilidad de horarios del doctor
 
 Esto se debe a que al estar anotado las fechas y horas de las citas de forma manual es mucho más lento y confuso el saber en qué horario un doctor está libre para poder agendar una cita. Además, en caso de haber anotado incorrectamente un horario esto puede desembocar en que se choquen los horarios con los pacientes lo cual generaría una clara inconformidad con el servicio que ofrece la unidad médica
 
