@@ -74,9 +74,8 @@ La opción más simple, en esta después de seleccionar al doctor que se desea, 
 
 ![image](https://github.com/JoaoConde12/taller_c_abet/assets/132232545/d97ced17-6b73-45f9-8c54-fa778ac58ec7)
 
-## Conclusiones
+## Conclusiones y recomendaciones
 
+Como conclusiones generales, es un programa sencillo pero logra solucionar los nudos críticos del programa, ya que hay un manejo mucho más sencillo a la hora de agendar cita. Estas se almacenan en archivos .txt donde es mucho más fácil acceder a esa información y visualizarla que si se agendara de forma manual, con esto también se reducen las posibilidades de que haya confusiones o pérdidas. También logra hacer que se agilice mucho más el proceso de agendamiento de una cita, ya que para agendar una basta con insertar unos cuantos números para seleccionar el doctor y escoger la fecha en la que se desea agendar su cita; con esto se reduce de forma significativa los tiempos en los que una persona se demoraría si se hace este proceso de forma manual. Finalmente es mucho mejor visualizar los horarios de esta forma que si se anotara en hoja y papel, como se ve en las imágenes anteriores, se imprimer correctamente el horario y es claro en que hora y día hay una cita agendada y en cuales no, esto facilita la lectura de horarios para las personas que se encarguen de agendar las citas
 
-
-
-
+Como recomendaciones, se debería dar una pequeña capacitación al personal de la unidad médica que esté encargado del proceso de agendamiento de citas, ya que si se desea agregar un nuevo doctor, estos se deben guardar en el archivo doctores.txt de forma alfabética. Adicional a esto, se debe crear su propio archivo .txt donde se encontrará su horario personal. Algunas de las mejoras que se podría hacer es añadir una opción para que al acabar la semana, se puedan reiniciar todos los horarios, es decir, que no se muestre ninguna cita agendada, ya que hasta ahora este proceso se debe hacer de forma manual. Por último, sería idóneo que los archivos con los nombres de los doctores y sus horarios se suban a una base de datos, ya que de esta manera en caso de que a la computadora donde se registren los horarios le ocurra alguna falla, estos archivos no se verían afectados.
